@@ -17,6 +17,8 @@ app.use(cookieSession({
   keys: [ keys.session.cookieKey ]
 }));
 
+app.use(express.static(__dirname + '/public'))
+
 // initialize passport
 app.use( passport.initialize() );
 app.use( passport.session() );

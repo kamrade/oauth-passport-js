@@ -15,7 +15,8 @@ router.get('/logout', (req, res) => {
 
 // auth with google
 router.get('/google', passport.authenticate('google', {
-  scope: ['profile']
+  scope: ['profile'],
+  prompt: 'select_account'
 }));
 
 // callback route for google to redirect to
